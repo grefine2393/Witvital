@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoring & Unternehmensberatung – Witvital</title>
+    <meta name="description" content="Brechen Sie gemeinsam mit Ihrem Team zu neuen Ufern. Wir beraten Sie zu Fragen der Unternehmensentwicklung.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0084D1;
+            --primary-dark: #0069a3;
+            --dark: #1a1a1a;
+            --gray: #666;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --font: 'Manrope', sans-serif;
+            --mono: 'JetBrains Mono', monospace;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font);
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+        
+        header {
+            background: var(--white);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        nav { display: flex; gap: 2rem; }
+        
+        nav a {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover { color: var(--primary); }
+        
+        .hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
+            color: var(--white);
+            padding: 8rem 2rem 4rem;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+        
+        .hero h1 span {
+            color: var(--primary);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 600px;
+        }
+        
+        section {
+            padding: 4rem 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .section-subtitle {
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+        
+        .content-block {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .content-block h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .content-block p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+        
+        .content-block ul {
+            color: var(--gray);
+            margin-left: 1.5rem;
+        }
+        
+        .content-block li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .image-placeholder {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            border-radius: 16px;
+            padding: 4rem;
+            text-align: center;
+            color: #666;
+            font-family: var(--mono);
+            border: 2px dashed #444;
+            margin: 2rem 0;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-card p {
+            color: var(--gray);
+        }
+        
+        .cta {
+            background: var(--primary);
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .cta h2 { color: var(--white); }
+        
+        .cta p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary);
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: #666;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        footer a { color: var(--primary); text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .hero { min-height: 40vh; padding-top: 5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">Witvital</a>
+            <nav>
+                <a href="ueber-uns.html">Über uns</a>
+                <a href="mentoring.html">Mentoring</a>
+                <a href="casawital.html">Casa Wital</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mentoring &<br><span>Unternehmensberatung</span></h1>
+            <p>Brechen Sie gemeinsam mit Ihrem Team zu neuen Ufern auf.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="content-block">
+                <h2>Unsere Beratung</h2>
+                <p>Ziel unserer Beratung ist es, in einer bestehenden Unternehmensstruktur die entwicklungsfördernden Potentiale herauszuarbeiten, um das Unternehmen <strong>beweglicher, attraktiver und leistungsfähiger</strong> zu machen.</p>
+                <p>Die individuellen Gegebenheiten stehen dabei immer im Vordergrund. Wir glauben daran, dass nachhaltiger Erfolg durch maßgeschneiderte Strategien entsteht – keine Einheitslösungen.</p>
+                <p>Unser Ziel ist es, dass Sie als Führungsperson nachhaltig einen individuellen Weg finden, an sich selbst und Ihrer Organisation zu arbeiten.</p>
+            </div>
+            
+            <div class="image-placeholder">
+                [TEAM-BILD HIER EINFUEGEN]
+                <br>Foto vom Beratungsteam
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--white);">
+        <div class="container">
+            <h2 class="section-title">Was wir anbieten</h2>
+            
+            <div class="grid-2">
+                <div class="feature-card">
+                    <h3>📊 Unternehmensentwicklung</h3>
+                    <p>Wir analysieren Ihre Unternehmensstruktur und identifizieren Potenziale für Wachstum und Verbesserung.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>👥 Führungscoaching</h3>
+                    <p>Individuelle Begleitung von Führungskräften zur Entwicklung von Leadership-Kompetenzen.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🚀 Teamentwicklung</h3>
+                    <p>Stärkung der Zusammenarbeit und Kommunikation in Ihrem Team.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🎯 Strategie & Vision</h3>
+                    <p>Gemeinsame Entwicklung klarer Strategien und einer visionären Ausrichtung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="content-block" style="text-align: center;">
+                <h2>Unsere Erfahrung</h2>
+                <p style="max-width: 700px; margin: 0 auto 1rem;">Unsere Unternehmensgeschichte ist voll von Erfolgserlebnissen. Die meisten davon sind das Ergebnis einer bewältigten Herausforderung, bevor die Krise gekommen wäre.</p>
+                <p style="max-width: 700px; margin: 0 auto;">Unternehmergeist, Mut und Beharrlichkeit, vor allem aber auch Geistesgegenwart und Fachkompetenz sowie Erfahrung haben uns dahin gebracht, wo wir heute stehen.</p>
+                <p style="max-width: 700px; margin: 0 auto;">Die Intention unseres Mentoring-Programms und unserer Beratungsleistungen gehen weit über die herkömmliche theoretische Lehre von Grundsätzen hinaus. Der Anspruch an uns selbst ist eine kontinuierliche Weiterentwicklung.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="kontakt">
+        <div class="container">
+            <h2>Lassen Sie uns sprechen</h2>
+            <p>Vereinbaren Sie ein unverbindliches Gespräch mit uns.</p>
+            <a href="mailto:info@witvital.de" class="btn">Kontakt aufnehmen</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Witvital | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+        </div>
+    </footer>
+</body>
+</html>

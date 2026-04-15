@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns – Witvital</title>
+    <meta name="description" content="Witvital – Ihr Partner für Unternehmensberatung und Casa Wital.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0084D1;
+            --primary-dark: #0069a3;
+            --dark: #1a1a1a;
+            --gray: #666;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --font: 'Manrope', sans-serif;
+            --mono: 'JetBrains Mono', monospace;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font);
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+        
+        header {
+            background: var(--white);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        nav { display: flex; gap: 2rem; }
+        
+        nav a {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover { color: var(--primary); }
+        
+        .hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
+            color: var(--white);
+            padding: 8rem 2rem 4rem;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 600px;
+        }
+        
+        section {
+            padding: 4rem 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .section-subtitle {
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .card p {
+            color: var(--gray);
+        }
+        
+        .card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .card a:hover {
+            text-decoration: underline;
+        }
+        
+        .image-placeholder {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            border-radius: 16px;
+            padding: 4rem;
+            text-align: center;
+            color: #666;
+            font-family: var(--mono);
+            border: 2px dashed #444;
+            margin: 1rem 0;
+        }
+        
+        .values {
+            background: var(--white);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .value-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .value-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .value-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        .cta {
+            background: var(--primary);
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .cta h2 { color: var(--white); }
+        
+        .cta p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary);
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: #666;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        footer a { color: var(--primary); text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .hero { min-height: 40vh; padding-top: 5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">Witvital</a>
+            <nav>
+                <a href="ueber-uns.html">Über uns</a>
+                <a href="mentoring.html">Mentoring</a>
+                <a href="casawital.html">Casa Wital</a>
+                <a href="#kontakt">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Über uns</h1>
+            <p>Witvital – Ihr Partner für Unternehmensentwicklung und persönliche Vitalität.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Was wir tun</h2>
+            <p class="section-subtitle">Wir bieten zwei strategische Bereiche, die Menschen und Unternehmen stärken.</p>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🏢 Unternehmensberatung & Mentoring</h3>
+                    <p>Gemeinsam mit Ihrem Team brechen wir zu neuen Ufern auf. Wir beraten Sie zu Fragen der Unternehmensentwicklung, arbeiten entwicklungsfördernde Potentiale heraus und helfen Ihnen, Ihr Unternehmen beweglicher, attraktiver und leistungsfähiger zu machen.</p>
+                    <a href="mentoring.html">Mehr zum Mentoring →</a>
+                </div>
+                
+                <div class="card">
+                    <h3>🏠 Casa Wital</h3>
+                    <p>Entdecken Sie in unseren besonderen Räumen, wie Sie Ihr Wohlbefinden steigern können. Ob Wital Methode, Körperregulation oderEvents – wir begleiten Sie zu mehr Vitalität und innerer Ruhe.</p>
+                    <a href="casawital.html">Casa Wital entdecken →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Unsere Werte</h2>
+            
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">🎯</div>
+                    <h4>Fokus</h4>
+                    <p>Wir konzentrieren uns auf das Wesentliche und entwickeln maßgeschneiderte Lösungen.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <h4>Partnerschaft</h4>
+                    <p>Ihre individuellen Gegebenheiten stehen immer im Vordergrund.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">📈</div>
+                    <h4>Entwicklung</h4>
+                    <p>Nachhaltige Veränderung für Menschen und Organisationen.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">💡</div>
+                    <h4>Innovation</h4>
+                    <p>Wir denken weiter und finden neue Wege zu Ihrem Erfolg.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <h2 class="section-title">Kontaktieren Sie uns</h2>
+            <p class="section-subtitle">Sprechen Sie uns an – wir freuen uns auf Sie.</p>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h3>📍 Standort</h3>
+                    <p>Witznau 1<br>79777 Ühlingen-Birkendorf</p>
+                </div>
+                
+                <div class="card">
+                    <h3>📧 Kontakt</h3>
+                    <p>Tel: +49 77 47 92 02 46<br>E-Mail: info@witvital.de</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Lassen Sie uns sprechen</h2>
+            <p>Ob Unternehmensberatung oder Casa Wital – wir freuen uns auf Ihre Nachricht.</p>
+            <a href="mailto:info@witvital.de" class="btn">Kontakt aufnehmen</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Witvital | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+        </div>
+    </footer>
+</body>
+</html>
