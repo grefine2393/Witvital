@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutz – Witvital</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --turquoise: #2A9D8F;
+            --turquoise-light: #52C4B7;
+            --turquoise-dark: #1E7A6D;
+            --cream: #FAF8F5;
+            --sand: #E8E4DD;
+            --warm-gray: #5A5652;
+            --dark: #2D2D2D;
+        }
         body {
-            font-family: 'Manrope', sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--dark);
             line-height: 1.8;
             padding: 40px 20px;
         }
@@ -18,28 +30,29 @@
             margin: 0 auto;
         }
         h1 {
-            color: #00ffcc;
+            color: var(--turquoise-dark);
             margin-bottom: 40px;
         }
         h2 {
-            color: #00ffcc;
+            color: var(--turquoise-dark);
             margin-top: 40px;
             font-size: 1.3rem;
         }
         p, li {
-            color: #b0b0b0;
+            color: var(--warm-gray);
         }
         a {
-            color: #00ffcc;
+            color: var(--turquoise);
         }
         .back-link {
             display: inline-block;
             margin-bottom: 30px;
-            color: #00ffcc;
+            color: var(--turquoise);
             text-decoration: none;
+            font-weight: 500;
         }
         .back-link:hover {
-            text-decoration: underline;
+            color: var(--turquoise-dark);
         }
     </style>
 </head>
